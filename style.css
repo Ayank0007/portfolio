@@ -3,10 +3,10 @@
     margin: 0;
     box-sizing: border-box;
     font-family: 'Be Vietnam Pro', sans-serif;
+    user-select: none;
 }
 :root{
     --orange:#e84949;
-    user-select: none;
 }
 .container{
     width: 1200px;
