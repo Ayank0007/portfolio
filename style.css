@@ -6,6 +6,7 @@
 }
 :root{
     --orange:#e84949;
+    user-select: none;
 }
 .container{
     width: 1200px;
