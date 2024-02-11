@@ -1,0 +1,210 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Be Vietnam Pro', sans-serif;
+}
+:root{
+    --orange:#e84949;
+}
+.container{
+    width: 1200px;
+    margin: 0 auto;
+}
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav-left .name{
+    align-items: center;
+    display: flex;
+    font-size: 25px;
+}
+.nav-left .name-head{
+    margin-right: -8px;
+    font-size: 90px;
+    font-weight: 300;
+}
+.nav-right{
+    padding: 0 4rem;
+    display: flex;
+    gap: 2rem;
+    font-weight: 300;
+    font-size: 20px;
+}
+.navbar a{
+    color: black;
+    text-decoration: none;
+}
+.hero-sec{
+    display: flex;
+    padding: 2em 0;
+    justify-content: space-between;
+}
+.hero-left{
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+}
+.head-1{
+    color: #343d68;
+    font-size: 35px;
+}
+.mv-text{
+    color: #4e45d5;
+    font-size: 45px;
+}
+.dec{
+    width: 70%;
+    font-size: 20px;
+    font-weight: 300;
+}
+.btn-orng{
+    position: relative;
+    padding: 12.8px 36.8px;
+    box-shadow: 0px 0px 6px black;
+    width: fit-content;
+    color: white;
+    background-color:var(--orange) ;
+    z-index: 1;
+    transition: .4s;
+    cursor: pointer;
+}
+.btn-orng::before{
+    position: absolute;
+    content: "";
+    background-color: white;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    transform: scaleX(0);
+    z-index: -1;
+    transform-origin: left;
+    transition: .4s;
+}
+.btn-orng:hover::before{
+    transform: scaleX(1);
+}
+.btn-orng:hover{
+    color: black;
+}
+.hire-me::before{
+    margin: 2px;
+}
+.hero-left{
+    width: 50%;
+}
+.hero-right{
+    position: relative;
+    display: flex;
+    justify-content: right;
+    width: 30%;
+}
+.user-img{
+    padding: 2rem;
+    object-fit: cover;
+    width:100% ;
+    animation:user 4s ease-in-out 0s infinite alternate-reverse;
+}
+@keyframes user {
+    0%{
+        box-shadow: 0px 0px 9px black;
+        transform: scale(1);
+        filter: grayscale(100%);
+    }
+    100%{
+        transform: scale(1.08);
+        filter: grayscale(0%);
+    }
+}
+.absolute{
+    position: absolute;
+}
+.dot{
+    animation:dot 6s ease-out 0s infinite alternate-reverse;
+}
+@keyframes dot {
+    0%{
+        right: 0;
+        bottom:0;
+    }
+    50%{
+        right: 2%;
+        bottom:6%;
+    }
+    100%{
+        right: -3%;
+        bottom:0;
+    }
+}
+.plus{
+    animation:plus 7s ease-out 0s infinite;
+}
+@keyframes plus {
+    0%{
+        top: 0;
+        right: 40%;
+    }
+    50%{
+        top: 6%;
+        right: 42%;
+    }
+    100%{
+        top: 0;
+        right: 40%;
+    }
+}
+.cube{
+    animation:cube 3.9s ease 0s infinite;
+}
+@keyframes cube {
+    0%{
+        top: 0;
+        right: 0;
+    }
+    50%{
+        top: 4%;
+        right: 0;
+        transform: rotateY(180deg);
+    }
+    100%{
+        top: 0;
+        right: 0;
+    }    
+}
+.circle{
+    animation:circle 10s ease-out 0s infinite;
+}
+@keyframes circle {
+    0%{
+        left: 0;
+        bottom:0;
+    }
+    50%{
+        left: 4%;
+        bottom:8%;
+    }
+    100%{
+        left: 0;
+        bottom:0;
+    }        
+}
+.zig-zag{
+    animation:zig-zag 3s linear 0s infinite;
+}
+@keyframes zig-zag {
+    0%{
+        top: 0;
+        left: 0;
+    }
+    50%{
+        top: 2%;
+        left: -3%;
+    }
+    100%{
+        top: 0;
+        left: 0;
+    }        
+}
