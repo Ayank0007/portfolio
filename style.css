@@ -94,6 +94,7 @@
     transform: scaleX(1);
 }
 .btn-orng:hover{
+    color: black;
     a{
         color: black;
     }
@@ -307,4 +308,60 @@
 .card-head-l{
     left: -40px;
     top: -45px;
+}
+.card-link{
+    display: flex;
+    align-items: center;
+    img{
+        padding-top: 5px;
+        margin: 0 10px;
+        /* transform: scale(1.1); */
+        object-fit: cover;
+        filter: invert(100%);
+        width: 70%;
+        transition: 0.4s;
+        transition-timing-function: ease;
+    }
+}
+.card-head{
+    font-size: 50px;
+    font-weight: 500;
+}
+
+.card-content{
+    display: flex;
+    gap: 1em;
+    flex-direction: column;
+    color: white;
+    position: absolute;
+    bottom:20%;
+    transition: .4s;
+    padding: 2em;
+    width:70%;
+}
+.card-left{
+    left: 10%;
+}
+.card-right{
+    right:0%
+}
+.card-link img:hover{
+    filter: invert(32%) sepia(27%) saturate(1198%) hue-rotate(313deg) brightness(132%) contrast(119%);
+}
+.card-desc{
+    width: 70%;
+}
+.card-images{
+    width: 60%;
+    display: grid;
+    grid-template-columns: repeat(8,1fr);
+    grid-template-rows: auto;
+    row-gap: 5px;
+    img{
+        width: 80%;
+        object-fit: cover;
+    }
+}
+.card:hover .card-content{
+    transform: scale(1.09);
 }
