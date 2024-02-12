@@ -247,7 +247,7 @@
     position: relative;
     width: 90%;
     height: 550px;
-    border: 3px solid black;
+    /* border: 3px solid black; */
     background-size: cover;
     z-index: 0;
     box-shadow: rgb(31, 31, 31) 0px 0px 40px;
