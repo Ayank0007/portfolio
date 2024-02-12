@@ -4,6 +4,7 @@
     box-sizing: border-box;
     font-family: 'Be Vietnam Pro', sans-serif;
     user-select: none;
+    scroll-behavior: smooth;
 }
 :root{
     --orange:#e84949;
@@ -62,6 +63,10 @@
     font-weight: 300;
 }
 .btn-orng{
+    a{
+        color: aliceblue;
+        text-decoration: none;
+    }
     position: relative;
     padding: 12.8px 36.8px;
     box-shadow: 0px 0px 6px black;
@@ -69,7 +74,7 @@
     color: white;
     background-color:var(--orange) ;
     z-index: 1;
-    transition: .4s;
+    transition: 0.4s;
     cursor: pointer;
 }
 .btn-orng::before{
@@ -89,7 +94,9 @@
     transform: scaleX(1);
 }
 .btn-orng:hover{
-    color: black;
+    a{
+        color: black;
+    }
 }
 .hire-me::before{
     margin: 2px;
@@ -208,4 +215,96 @@
         top: 0;
         left: 0;
     }        
+}
+#project{
+    background-color: #e7e7e7;
+    display: flex;
+    flex-direction: column;
+}
+.project-body{
+    display: flex;
+    flex-direction: column;
+    gap: 120px;
+    width: 1200px;
+    padding: 3rem 0;
+    margin: 0 auto;
+    position: relative;
+}
+.project-head{
+    text-align: center;
+    color: var(--orange);
+    font-size: 90px;
+}
+.card{
+    position: relative;
+    width: 90%;
+    height: 550px;
+    border: 3px solid black;
+    background-size: cover;
+    z-index: 0;
+    box-shadow: rgb(31, 31, 31) 0px 0px 40px;
+}
+.card::before{
+    position: absolute;
+    content: "";
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(45deg, rgb(52, 61, 104), rgba(52, 61, 104, 0.745), rgba(52, 61, 104, 0.486));
+    z-index: -1;
+    transform: scaleX(0);
+    transform-origin:left ;
+    transition: all 0.4s ease 0s;
+}
+.card:hover::before{
+    transform: scaleX(1);
+}
+.card::after{
+    content: "";
+    color: rgb(255, 255, 255);
+    position: absolute;
+    z-index: -2;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    transform: scaleX(1);
+    background: rgba(31, 31, 31, 0.604);
+}
+.card-1{
+    left: 0;
+    background-image: url(./images/projects/Project1.png);
+}
+.card-2{
+    left: 10%;
+    background-image: url(./images/projects/Project2.png);
+}
+.card-3{
+    left: 0;
+    background-image: url(./images/projects/Project3.png);
+}
+.card-4{
+    left: 10%;
+    background-image: url(./images/projects/Project4.png);
+}
+.head{
+    position: absolute;
+    color: white;
+    font-size:200px ;
+    transform: scale(0);
+}
+.card:hover{
+    .head{
+        transition-delay:0.4s ;
+        transform: scale(1);
+    }
+}
+.card-head-r{
+    right: -40px;
+    top: -45px;
+}
+.card-head-l{
+    left: -40px;
+    top: -45px;
 }
